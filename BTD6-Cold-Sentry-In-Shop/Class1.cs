@@ -77,10 +77,13 @@ namespace BTD6_Cold_Sentry_In_Shop
                 }
                 towerModel.cost = SentryColdCost;
                 towerModel.towerSet = "Support";
+                towerModel.radius = 6;
+                towerModel.radiusSquared = 36;
+                towerModel.footprint.doesntBlockTowerPlacement = false;
                 List<Model> temp = new List<Model>();
                 for (int i = 0; i < towerModel.behaviors.Length; i++)
                 {
-                    if (towerModel.behaviors[i].name!="TowerExpireModel_")
+                    if (towerModel.behaviors[i].name != "TowerExpireModel_")
                     {
                         temp.Add(towerModel.behaviors[i]);
                     }
